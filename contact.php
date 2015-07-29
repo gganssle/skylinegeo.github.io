@@ -7,10 +7,10 @@
     <meta name="viewport" content="width=device-width">
     
     <meta property="og:title" content="Skyline Geo">
-  	<meta property="og:type" content="website">
-  	<meta property="og:url" content="http://skylinegeo.com">
-  	<meta property="og:site_name" content="Skyline Geo">
-  	<meta property="og:description" content="Skyline Geo: Earth science meets the cloud.">
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="http://skylinegeo.com">
+	<meta property="og:site_name" content="Skyline Geo">
+	<meta property="og:description" content="Skyline Geo: Earth science meets the cloud.">
 
     <!-- Styles -->
     <link rel="stylesheet" href="css/font-awesome.min.css">
@@ -32,9 +32,9 @@
     <link rel="shortcut icon" href="/favicon.ico">
   </head>
 
-  
   <body>
         
+    <!--Nav Bar-->
     <!--Nav Bar-->
     <div class="navbar navbar-inverse navbar-fixed-top animated fadeInDownBig">
         <div class="navbar-inner">
@@ -56,15 +56,13 @@
     </div>
     
     
-    <!--Home Section-->
-    <section id="home">
+    <!--Header Section-->
+    <section id="page-title">
 	    <div class="overlay">
 	    	<div class="container">
 	    		<div class="row-fluid animated fadeInRight">
 	    			<div class="span12 hero-text text-left">
-	    				<h1>Earth science <span class="sg-light"> meets</span><br />
-	    				the cloud</h1>
-	    				<p class="lead">Compute power, native collaboration, and beautiful simplicity.</p>
+	    				<h1><span class="sg-light">Get </span>In Touch</h1>
 	    			</div>
 	    		</div>
 	    	</div>
@@ -72,6 +70,66 @@
     </section>
     
     
+    <!--Studio Content Section One-->
+    <section id="content">
+    	<div class="container">
+    		<div class="row-fluid animated fadeInUpBig">
+    			
+    			<!--Start Colums One-->
+    			<div class="span3 section-title text-left">
+    				<h3>/ Contact</h3>
+    			</div>
+					
+    			<!--Start Column Two-->
+    			<div class="span9">
+    				<h2>We're in beta release! Contact us to learn more.</h2>
+    				        										
+					<?php  
+
+                    // check for a successful form post  
+                    if (isset($_GET['s'])) echo "<div class=\"alert alert-success\">".$_GET['s']."</div>";  
+              
+                    // check for a form error  
+                    elseif (isset($_GET['e'])) echo "<div class=\"alert alert-error\">".$_GET['e']."</div>";  
+              
+                    ?>  
+																	
+					<form method="POST" action="contact-form-submission.php">  
+					   <div class="row-fluid">
+					       <div class="span4">
+                                <div class="control-group">  
+                                    <div class="controls">  
+                                        <input type="text" name="contact_name" id="input1" placeholder="Your name">  
+                                    </div>  
+                                </div>  
+                                <div class="control-group">  
+                                    <div class="controls">  
+                                        <input type="text" name="contact_email" id="input2" placeholder="Your email address">  
+                                    </div>  
+                                </div>
+					       </div>
+					       
+					       <div class="span8">
+                                <div class="control-group">  
+                                    <div class="controls">  
+                                        <textarea name="contact_message" id="input3" rows="8" placeholder="The message you'd like to send."></textarea>  
+                                    </div>  
+                                </div>  
+                                <div class="text-right">  
+                                    <input type="hidden" name="save" value="contact">  
+                                    <button type="submit" class="btn btn-black btn-large">Send</button>  
+                                </div>
+					       </div>
+                        </div>              
+                    </form>  
+        					
+                </div>
+    			
+    		</div>
+    	</div>
+    </section>
+            
+      
     <!--Footer Section-->
     <section id="footer">
     	<div class="container">
@@ -120,8 +178,8 @@
   	        duration: 3000
   	    });
   	});
-  	</script>  
-
+	</script> 
+ 
    
     </body>
 </html>
